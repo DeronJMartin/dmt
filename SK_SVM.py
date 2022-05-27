@@ -12,7 +12,7 @@ from sklearn import preprocessing
 spotifyData = pd.read_csv('data1.csv')
 
 # Drop label and irrelevant classes
-x = spotifyData.drop(['artist', 'target', 'song_title', 'serial_num'], axis=1)
+x = spotifyData[['acousticness', 'danceability', 'duration_ms', 'energy', 'instrumentalness', 'key', 'liveness', 'loudness', 'mode', 'speechiness', 'tempo', 'time_signature', 'valence']]
 y = spotifyData['target']
 
 # Split data into training and testing sets
